@@ -104,6 +104,9 @@ h3 {
   height: 60vw;
   background-color: #000000;
 }
+#fundo_cards{
+  background-image: url(../imagens/background_cards.png);
+}
 body {
   height: 4000px;
   margin: 0;
@@ -366,7 +369,7 @@ a {
 /*-------card team--------------*/
 .body {
   display: flex;
-  padding: 150px;
+  padding: 20px 150px 150px 150px;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
