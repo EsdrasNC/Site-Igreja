@@ -1,18 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  height: 4000px;
+  margin: 0;
+  background-color: #ffffff;
+  background-size: cover, contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-x: hidden;
+}
 video {
   z-index: 1;
   display: flex;
 }
-#maps{
+#maps {
   align-items: center;
   display: flex;
-
 }
 #video_youtube {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: ;
+  height: 16%;
+  width: 70%;
+  left: 50%;
+  margin-left: 50%;
+  transform: translate(-50%);
 }
 .montserrat-alternates-thin {
   font-family: "Montserrat Alternates", sans-serif;
@@ -104,26 +117,19 @@ h3 {
   height: 60vw;
   background-color: #000000;
 }
-#fundo_cards{
-  background-image: url(../imagens/background_cards.png);
+#fundo_cards {
+  background-image: url(../imagens/1523_BACKGROUND.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 99999;
   width: 100%;
-  height: 40%;
+  height: 30%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body {
-  height: 4000px;
-  margin: 0;
-  background-color: #ffffff;
-  background-size: cover, contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  overflow-x: hidden;
-}
+
 .header {
   align-items: center;
   display: flex;
@@ -158,10 +164,9 @@ a {
 
 #info_page {
   position: absolute; /* Garante que ele fique sobre o vídeo */
-  top: 0;
-  left: 0;
+  top: 600px;
+  left: -5px;
   width: 100%;
-  height: 100%;
   z-index: 2; /* Garante que o info_page fique acima do vídeo */
   display: flex;
   align-items: center;
@@ -204,7 +209,8 @@ a {
 }
 /*-------botao nav--------------*/
 
-#top {
+#top,
+#top_menu {
   font-family: "Montserrat Alternates", sans-serif;
   font-size: 5px;
   color: #e1e1e1;
@@ -218,13 +224,17 @@ a {
   transition-property: color;
 }
 
-#top:focus,
-#top:hover {
+#top,
+#top_menu:focus,
+#top,
+#top_menu:hover {
   color: #fff;
 }
 
-#top:focus:after,
-#top {
+#top,
+#top_menu:focus:after,
+#top,
+#top_menu {
   font-size: 15px;
   color: #e1e1e1;
   font-weight: 800;
@@ -237,13 +247,17 @@ a {
   transition-property: color;
 }
 
-#top:focus,
-#top:hover {
+#top,
+#top_menu:focus,
+#top,
+#top_menu:hover {
   color: #fff;
 }
 
-#top:focus:after,
-#top:hover:after {
+#top,
+#top_menu:focus:after,
+#top,
+#top_menu:hover:after {
   width: 100%;
   left: 0%;
 }
@@ -457,7 +471,7 @@ a {
   z-index: 1;
   transition: all 0.3s ease-out;
 }
-.circle p{
+.circle p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -489,9 +503,30 @@ a {
   z-index: 0;
   transition: transform 0.3s ease-out;
 }
+.mobile_menu {
+  display: none;
+}
+#checkbox {
+  display: none;
+}
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   /* Ajusta o tamanho da logo */
+  #video_youtube {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    z-index: 100000;
+  }
+  #checkbox {
+    display: none;
+  }
+
   #logo {
     width: 80px;
   }
@@ -508,7 +543,9 @@ a {
   }
 
   /* Centraliza e ajusta o tamanho dos textos */
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     font-size: 18px;
     text-align: center;
   }
@@ -520,23 +557,29 @@ a {
   }
 
   .card {
-    width: 100%;
-    margin: 0.5rem 0;
+    width: 120px;
+    margin: 0;
   }
 
   /* Ajusta o cronograma para dispositivos móveis */
   #cronograma {
-    margin-top: 100px;
-    padding: 0 15px;
-    
+    margin-top: 970px;
+    padding: 0;
+    margin-left: 130px;
   }
 
   /* Ajusta a barra de navegação */
   #nav_format {
-    padding: 5px;
+    padding: 1.5rem 4rem;
     margin-top: 10px;
   }
 
+  #top,
+  #top_login,
+  .header,
+  #nav_format {
+    display: none;
+  }
   /* Ajusta o botão de login */
   #top_login {
     padding: 5px 15px;
@@ -547,6 +590,17 @@ a {
   #inscrever {
     padding: 0.5rem 2rem;
     font-size: 20px;
+  }
+  #fundo_cards{
+      background-image: url(../imagens/background_cards-02.png);
+      width: 133%;
+      height: 98%;
+      display: block;
+      margin: 72px 0px 79px -129px;
+      background-size: cover;
+      padding-bottom: 70px;
+      padding-top: 0px;
+      box-sizing: border-box;
   }
 
   /* Ajusta o fundo das imagens */
@@ -561,17 +615,129 @@ a {
   }
 
   #top_background video {
-    height: 200px;
+    height: 845px;
+    z-index: 0;
   }
 
   /* Ajusta o texto de informações */
   #info_text {
     padding-top: 250px;
   }
-
   /* Ajusta o tamanho e espaçamento do body */
   body {
     height: auto;
-    padding: 10px;
+    padding: 0px;
+  }
+  /* botão toggle */
+  .toggle {
+    position: relative;
+    width: 40px;
+    left: 175px;
+    top: 10px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    height: calc(4px * 3 + 11px * 2);
+  }
+
+  .bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: calc(4px / 2);
+    background: #ffffff;
+    color: inherit;
+    opacity: 1;
+    transition: none 0.35s cubic-bezier(0.5, -0.35, 0.35, 1.5) 0s;
+  }
+
+  /***** Tornado Animation *****/
+
+  .bar--top {
+    bottom: calc(50% + 11px + 4px / 2);
+    transition-property: bottom, transform;
+    transition-delay: calc(0s + 0.35s) * 0.6;
+  }
+
+  .bar--middle {
+    top: calc(50% - 4px / 2);
+    transition-property: opacity, transform;
+    transition-delay: calc(0s + 0.35s * 0.3);
+  }
+
+  .bar--bottom {
+    top: calc(50% + 11px + 4px / 2);
+    transition-property: top, transform;
+    transition-delay: 0s;
+  }
+
+  #checkbox:checked + .toggle .bar--top {
+    transform: rotate(-135deg);
+    transition-delay: 0s;
+    bottom: calc(50% - 4px / 2);
+  }
+
+  #checkbox:checked + .toggle .bar--middle {
+    opacity: 0;
+    transform: rotate(-135deg);
+    transition-delay: calc(0s + 0.35s * 0.3);
+  }
+
+  #checkbox:checked + .toggle .bar--bottom {
+    top: calc(50% - 4px / 2);
+    transform: rotate(-225deg);
+    transition-delay: calc(0s + 0.35s * 0.6);
+  }
+  #menuToggle {
+    position: absolute;
+    z-index: 100000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .mobile_menu {
+    position: absolute;
+  }
+  .mobile_menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .mobile_menu .top_menu {
+    display: block;
+    padding-bottom: 1.2rem;
+  }
+  .open {
+    display: block;
+    z-index: 1000;
+    background-color: #db751cb2;
+    width: 100%;
+    height: 100%;
+    /* top: 54px; */
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  /***** padding cronograma *****/
+  .body {
+    padding: 0;
+    flex-direction: row;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    flex-wrap: unset;
+    width: 100vw;
+    box-sizing: border-box;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  ul {
+    padding-left: 0;
+  }
+  h1 {
+    padding-top: 90px;
   }
 }
