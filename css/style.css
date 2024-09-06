@@ -525,7 +525,7 @@ img {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 100vh;
+    top: 109vh;
     left: 0;
     z-index: 100000;
   }
@@ -751,6 +751,6 @@ img {
   }
   img {
     height: 300px;
-    margin-top: 250px;
+    margin-top: 210px;
   }
 }
