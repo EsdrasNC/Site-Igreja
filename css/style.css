@@ -526,7 +526,7 @@ img {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 80vh;
+    top: 85vh;
     left: 0;
     z-index: 100000;
   }
@@ -553,7 +553,7 @@ img {
   h1,
   h2,
   h3 {
-    font-size: 18px;
+    font-size: 30px;
     text-align: center;
   }
 
@@ -603,7 +603,7 @@ img {
     width: 133%;
     height: 98%;
     display: block;
-    margin: 72px 0px 79px -129px;
+    margin: 0px 0px 30px -129px;
     background-size: cover;
     padding-bottom: 70px;
     padding-top: 0px;
@@ -730,7 +730,7 @@ img {
   }
   /***** padding cronograma *****/
   .body {
-    padding: 0;
+    padding: 36px;
     flex-direction: row;
     overflow-x: scroll;
     justify-content: flex-start;
@@ -745,7 +745,7 @@ img {
     padding-left: 0;
   }
   h1 {
-    padding-top: 90px;
+    padding-top: 10px;
   }
   #logotipo {
     height: 500px;
