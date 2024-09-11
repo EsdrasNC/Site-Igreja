@@ -27,7 +27,6 @@ video {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 295px 0px 50px 0px;
   align-items: center;
 }
 #video_youtube {
