@@ -9,13 +9,26 @@ body {
   background-position: center;
   overflow-x: hidden;
 }
+footer {
+  display: flex;
+  text-align: center;
+  padding: 8px;
+  margin-top: 244px;
+  background-color: #ff600e;
+  align-items: flex-end;
+  font-family: "Montserrat Alternates", sans-serif;
+  justify-content: center;
+}
 video {
   z-index: 1;
   display: flex;
 }
 #maps {
-  align-items: center;
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 295px 0px 50px 0px;
+  align-items: center;
 }
 #video_youtube {
   display: flex;
