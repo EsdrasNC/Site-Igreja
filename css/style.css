@@ -13,11 +13,20 @@ footer {
   display: flex;
   text-align: center;
   padding: 8px;
-  margin-top: 244px;
+  margin-top: 0px;
   background-color: #ff600e;
   align-items: flex-end;
   font-family: "Montserrat Alternates", sans-serif;
   justify-content: center;
+}
+section {
+  height: 10%;
+  width: 100%;
+}
+#info_footer {
+  background-color: #ffb77c;
+  height: 100%;
+  width: 100%;
 }
 video {
   z-index: 1;
@@ -35,7 +44,7 @@ video {
   align-items: center;
   margin-top: 200px;
   height: 16%;
-  width: 70%;
+  width: 80%;
   left: 50%;
   margin-left: 50%;
   transform: translate(-50%);
@@ -528,6 +537,37 @@ img {
 #checkbox {
   display: none;
 }
+#logo_iap {
+  width: 100%;
+  height: 40%;
+  background-repeat: no-repeat;
+}
+.logo_footer {
+  height: 100px;
+  padding-left: 300px;
+  padding-top: 50px;
+}
+#logradouro {
+  font-family: "Montserrat Alternates", sans-serif;
+  height: 100px;
+  padding-left: 300px;
+  padding-top: 30px;
+}
+
+.social_media {
+  display: flex;
+  gap: 20px;
+}
+
+.social_media a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.social_media a img:hover {
+  transform: scale(1.2);
+}
 /* Responsividade para telas menores */
 @media (max-width: 768px) {
   /* Ajusta o tamanho da logo */
@@ -765,5 +805,19 @@ img {
   img {
     height: 300px;
     margin-top: 210px;
+  }
+  #logo_iap {
+    display: flex;
+  }
+  .logo_footer {
+    height: 100px;
+    padding-left: 70px;
+    margin: 0;
+  }
+  #logradouro,
+  .font_log {
+    padding: 25px;
+    height: 100px;
+    padding-top: 20px;
   }
 }
